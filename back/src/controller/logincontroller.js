@@ -6,6 +6,10 @@ import { generateToken } from "../middlewares/auth.middleware.js";
 
 export const signUp = async (req, res) => {
     const { username, email, password } = req.body;
+
+    if (!password || typeof password !== 'string') {
+        return res.status(400).json({ error: "La contraseña es inválida" });
+    }
     try {
 
         const userFind = await User.findOne({email: email})
