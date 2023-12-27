@@ -8,7 +8,7 @@ dotenv.config();
 
 
 const corsOptions = {
-  origin: process.env.ROOT_CLIENT, //YOU ROOT APP REACT/REACT NATIVE
+  origin: 'https://picture-flow-front-production.up.railway.app/', //YOU ROOT APP REACT/REACT NATIVE
   methods: ["GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"],
   credentials: true,
   optionsSuccessStatus: 204,
