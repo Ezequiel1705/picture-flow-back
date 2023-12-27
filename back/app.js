@@ -16,6 +16,9 @@ const corsOptions = {
 const app = express()
 
 app.use(express.json());
+app.use((req, res) => {
+  res.header("Access-Control-Allow-Origin", "https://picture-flow-front-production.up.railway.app/");
+});
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload({
