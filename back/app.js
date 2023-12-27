@@ -12,7 +12,7 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
   optionsSuccessStatus: 204,
-  allowedHeaders: ["Contect-Type", "Authorization"],
+  allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Headers"],
 };
 
 const app = express()
