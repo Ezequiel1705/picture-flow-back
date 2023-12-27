@@ -9,7 +9,7 @@ dotenv.config();
 
 const corsOptions = {
   origin: process.env.ROOT_CLIENT, //YOU ROOT APP REACT/REACT NATIVE
-  methods: ["GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
   optionsSuccessStatus: 204,
   allowedHeaders: ["Contect-Type", "Authorization"],
