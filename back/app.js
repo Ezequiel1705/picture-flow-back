@@ -8,7 +8,7 @@ dotenv.config();
 
 
 const corsOptions = {
-  origin: process.env.ROOT_CLIENT, //YOU ROOT APP REACT/REACT NATIVE
+  origin: process.env.RAILWAY_PUBLIC_DOMAIN, //YOU ROOT APP REACT/REACT NATIVE
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
   optionsSuccessStatus: 204,
