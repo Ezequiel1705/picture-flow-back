@@ -11,8 +11,8 @@ const corsOptions = {
   origin: process.env.ROOT_CLIENT, //YOU ROOT APP REACT/REACT NATIVE
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Headers", "url"],
+  /* optionsSuccessStatus: 204,
+  allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Headers", "url"], */
 };
 
 const app = express()
