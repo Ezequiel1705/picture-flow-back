@@ -8,7 +8,7 @@ dotenv.config();
 
 
 const corsOptions = {
-  origin: process.env.RAILWAY_PUBLIC_DOMAIN, //YOU ROOT APP REACT/REACT NATIVE
+  origin: process.env.ROOT_CLIENT, //YOU ROOT APP REACT/REACT NATIVE
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
   optionsSuccessStatus: 204,
@@ -19,24 +19,18 @@ const app = express()
 
 app.use(express.json());
 app.use(cors(corsOptions));
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
+
+app.use('/api', router)
+
 app.use(fileUpload({
   useTempFiles : true,
   tempFileDir : './upload'
 }))
 
 
-/* if (isProduction) {
-  app.use(express.static(CLIENT_PATH))
-} */
 
-app.use('/api', router)
 
-/* if (isProduction) {
-  app.get('*', (_req, res) => {
-    res.sendFile(CLIENT_PATH + '/index.html')
-  })
-} */
 
 const PORT = process.env.PORT || 8080;
 
